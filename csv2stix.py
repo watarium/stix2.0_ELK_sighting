@@ -49,6 +49,7 @@ def createdata(datalist):
         else:
             nextlist.append(dataone)
     createsighting(id,firstseen,lastseen,count)
+    # put data other than datalist into nextlist
     if not nextlist == []:
         createdata(nextlist)
 
