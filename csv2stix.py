@@ -26,7 +26,9 @@ def readcsvfile(csvfile):
 
     for row in reader:
         if getid(row[reqestn]) != None:
-            datalist.append([getid(row[reqestn]), int(row[timen]), row[reqestn], int(row[countn])])
+            id = getid(row[reqestn])
+            print(row[reqestn] + ' is related with ID:' + getid(row[reqestn]))
+            datalist.append([id, int(row[timen]), row[reqestn], int(row[countn])])
         else:
             print(row[reqestn] + ' is not on STIX index.')
     createdata(datalist)
